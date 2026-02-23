@@ -1,5 +1,5 @@
 """
-Command-line interface for re-vanity.
+Command-line interface for revanity.
 
 Usage:
     python -m revanity --prefix dead
@@ -20,20 +20,20 @@ from revanity.verify import verify_with_rns
 
 def create_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="re-vanity",
+        prog="revanity",
         description="Reticulum/LXMF Vanity Address Generator",
         epilog=(
             "Examples:\n"
-            "  re-vanity --prefix dead\n"
-            "  re-vanity --suffix cafe --workers 8\n"
-            "  re-vanity --contains beef\n"
-            '  re-vanity --regex "^(dead|beef)"\n'
+            "  revanity --prefix dead\n"
+            "  revanity --suffix cafe --workers 8\n"
+            "  revanity --contains beef\n"
+            '  revanity --regex "^(dead|beef)"\n'
         ),
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
 
     parser.add_argument(
-        "--version", action="version", version=f"re-vanity {__version__}"
+        "--version", action="version", version=f"revanity {__version__}"
     )
 
     pattern = parser.add_mutually_exclusive_group(required=True)
@@ -142,7 +142,7 @@ def main(argv: list[str] = None) -> int:
     difficulty = gen.get_difficulty()
 
     if not args.quiet:
-        print(f"re-vanity v{__version__}")
+        print(f"revanity v{__version__}")
         print(f"  Pattern:    {mode.value}='{gen.pattern_str}'")
         print(f"  Destination: {args.dest}")
         print(f"  Workers:    {gen.num_workers}")

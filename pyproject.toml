@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "re-vanity"
+name = "revanity"
 version = "1.0.0"
 description = "Reticulum/LXMF Vanity Address Generator with GUI and CLI"
 readme = "README.md"
@@ -22,9 +22,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/defidude/re-vanity"
-Repository = "https://github.com/defidude/re-vanity"
-Issues = "https://github.com/defidude/re-vanity/issues"
+Homepage = "https://github.com/defidude/revanity"
+Repository = "https://github.com/defidude/revanity"
+Issues = "https://github.com/defidude/revanity/issues"
 
 [project.optional-dependencies]
 gui = ["customtkinter>=5.0"]
@@ -32,7 +32,7 @@ verify = ["rns>=0.7.0"]
 all = ["customtkinter>=5.0", "rns>=0.7.0"]
 
 [project.scripts]
-re-vanity = "revanity.__main__:main"
+revanity = "revanity.__main__:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["revanity"]

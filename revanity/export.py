@@ -83,7 +83,7 @@ def save_identity_text(export: ExportedIdentity, path: str) -> str:
     os.makedirs(os.path.dirname(abs_path) or ".", exist_ok=True)
 
     lines = [
-        "# re-vanity Generated Identity",
+        "# revanity Generated Identity",
         f"# Identity Hash: {export.identity_hash_hex}",
         "#",
         "# Destination Hashes:",

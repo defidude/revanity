@@ -1,5 +1,5 @@
 """
-CustomTkinter GUI for re-vanity.
+CustomTkinter GUI for revanity.
 
 Provides a modern dark-themed interface for vanity address generation
 with real-time progress, difficulty estimation, and result export.
@@ -28,7 +28,7 @@ class ReVanityApp(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title(f"re-vanity v{__version__}")
+        self.title(f"revanity v{__version__}")
         self.geometry("720x850")
         self.minsize(620, 750)
 
@@ -93,7 +93,7 @@ class ReVanityApp(ctk.CTk):
         frame.grid(row=0, column=0, sticky="ew", padx=15, pady=(15, 5))
 
         ctk.CTkLabel(
-            frame, text="re-vanity",
+            frame, text="revanity",
             font=ctk.CTkFont(size=26, weight="bold"),
         ).pack()
         ctk.CTkLabel(
