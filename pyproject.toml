@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "re-vanity"
+version = "1.0.0"
+description = "Reticulum/LXMF Vanity Address Generator with GUI and CLI"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+keywords = ["reticulum", "lxmf", "vanity", "address", "nomadnet", "sideband"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Communications",
+    "Topic :: Security :: Cryptography",
+]
+dependencies = [
+    "cryptography>=2.8",
+]
+
+[project.urls]
+Homepage = "https://github.com/defidude/re-vanity"
+Repository = "https://github.com/defidude/re-vanity"
+Issues = "https://github.com/defidude/re-vanity/issues"
+
+[project.optional-dependencies]
+gui = ["customtkinter>=5.0"]
+verify = ["rns>=0.7.0"]
+all = ["customtkinter>=5.0", "rns>=0.7.0"]
+
+[project.scripts]
+re-vanity = "revanity.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["revanity"]
